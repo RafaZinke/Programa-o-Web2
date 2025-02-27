@@ -10,10 +10,4 @@ echo "Mensagem: " . nl2br(htmlspecialchars($_REQUEST['mensagem'] ?? 'Não inform
 echo "<h2>Método HTTP Utilizado</h2>";
 echo $_SERVER['REQUEST_METHOD'];
 
-
-echo "<h2>Cabeçalho da Requisição HTTP</h2>";
-$headers = apache_request_headers();
-foreach ($headers as $header => $value) {
-    echo htmlspecialchars($header) . ": " . htmlspecialchars($value) . "<br>";
-}
 ?>
