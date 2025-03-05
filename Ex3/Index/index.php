@@ -1,13 +1,10 @@
 <?php
-// Carrega o autoload do Composer
-require_once 'vendor/autoload.php';
+require_once 'C:\xampp\htdocs\Programa-o-Web2\Ex3\vendor\autoload.php';
 
 use Dompdf\Dompdf;
 
-// Instancia o objeto Dompdf
 $dompdf = new Dompdf();
 
-// Cria o conteúdo HTML que será convertido em PDF
 $html = '
 <!DOCTYPE html>
 <html>
@@ -17,20 +14,16 @@ $html = '
 </head>
 <body>
     <h1>Olá, Mundo!</h1>
-    <p>Este é um exemplo de geração de PDF utilizando o Dompdf.</p>
+    <p>Este é um exemplo de geração de PDF utilizando o Dompdf para o exercício de programação Web 2.</p>
 </body>
 </html>
 ';
 
-// Carrega o HTML no Dompdf
 $dompdf->loadHtml($html);
 
-// Define o tamanho do papel e a orientação
 $dompdf->setPaper('A4', 'portrait');
 
-// Renderiza o HTML como PDF
 $dompdf->render();
 
-// Exibe o PDF no navegador (Attachment false para abrir no navegador)
 $dompdf->stream("exemplo.pdf", ["Attachment" => false]);
 ?>
