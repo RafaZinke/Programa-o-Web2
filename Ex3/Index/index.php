@@ -10,16 +10,7 @@ class PDFGenerator {
         $this->dompdf = new Dompdf();
     }
 
-    /**
-     * Gera e exibe o PDF.
-     *
-     * @param string $html Conteúdo HTML que será convertido em PDF.
-     * @param string $fileName Nome do arquivo PDF.
-     * @param string $paper Tamanho do papel (ex: A4).
-     * @param string $orientation Orientação do papel (portrait ou landscape).
-     * @param bool $stream Se verdadeiro, o PDF será enviado para o navegador; caso contrário, retorna o conteúdo.
-     * @return string|void
-     */
+ 
     public function generatePDF($html, $fileName = "exemplo.pdf", $paper = "A4", $orientation = "portrait", $stream = true) {
         $this->dompdf->loadHtml($html);
         $this->dompdf->setPaper($paper, $orientation);
