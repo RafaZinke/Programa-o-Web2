@@ -1,5 +1,6 @@
 <?php
-require_once 'C:\xampp\htdocs\Programa-o-Web2\Ex3\vendor\autoload.php';
+require_once 'vendor/autoload.php';
+
 
 use Dompdf\Dompdf;
 
@@ -22,9 +23,9 @@ class PDFGenerator {
             return $this->dompdf->output();
         }
     }
-}
+}   
 
-// Conteúdo HTML
+
 $html = '
 <!DOCTYPE html>
 <html>
