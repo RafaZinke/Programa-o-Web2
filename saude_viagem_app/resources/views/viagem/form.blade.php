@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sua Aplicação</title>
+    <link rel="stylesheet" href="{{ asset('css/estilo.css') }}">
+</head>
+<body>
+<div class="container">
+
 <form method="GET" action="{{ route('viagem.calc') }}">
     Combustível:
     <select name="combustivel">
@@ -10,3 +20,6 @@
     Consumo do veículo (km/l): <input type="number" step="0.1" name="consumo"><br>
     <button type="submit">Calcular</button>
 </form>
+</div>
+</body>
+</html>
