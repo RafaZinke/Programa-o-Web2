@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Sua Aplicação</title>
+    <title>EX4</title>
     <link rel="stylesheet" href="{{ asset('css/estilo.css') }}">
 </head>
 <body>
